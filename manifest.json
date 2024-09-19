@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Google GPT",
+    "version": "0.0.1",
+    "description": "A Chrome extension that integrates GPT functionality for Google searches.",
+    "content_scripts": [
+        {
+            "matches": ["https://www.google.com/*"],
+            "js": ["content_script.js"]
+        }
+    ],
+    "permissions": [
+        "activeTab"
+    ]
+}
+
