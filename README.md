@@ -1,4 +1,4 @@
-# 🚀 Chrome-GPT-Extension
+# 🚀 GPTify, Chrome-GPT-Extension
 
 ## 🌟 Objective:
 This Chrome extension is built to enhance users' browsing and productivity by integrating GPT-powered AI content directly into their Google Search results. Below are the key features:
