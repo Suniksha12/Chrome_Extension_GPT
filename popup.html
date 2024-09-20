@@ -1,0 +1,31 @@
+<!-- popup.html -->
+<html>
+  <head>
+    <style>
+      body { font-family: Arial, sans-serif; }
+      .setting-option { margin: 10px 0; }
+    </style>
+  </head>
+  <body>
+    <h3>Google GPT - Settings</h3>
+    <div id="summary-box" style="display:none;"></div>
+    <div class="setting-option">
+      <label for="summary-length">Summary Length:</label>
+      <select id="summary-length">
+        <option value="short">Short</option>
+        <option value="medium">Medium</option>
+        <option value="detailed">Detailed</option>
+      </select>
+    </div>
+    <div class="setting-option">
+      <label for="theme">Theme:</label>
+      <select id="theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </div>
+    <button id="save-settings">Save Settings</button>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

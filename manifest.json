@@ -1,16 +1,28 @@
 {
     "manifest_version": 3,
-    "name": "Google GPT",
-    "version": "0.0.1",
-    "description": "A Chrome extension that integrates GPT functionality for Google searches.",
+    "name": "Google GPT - Enhanced",
+    "version": "0.1.0",
+    "description": "An advanced Chrome extension integrating GPT functionality for Google searches with features like floating summaries, voice input, and user customization.",
     "content_scripts": [
-        {
-            "matches": ["https://www.google.com/*"],
-            "js": ["content_script.js"]
-        }
+      {
+        "matches": ["https://www.google.com/*"],
+        "js": ["content_script.js", "summary_ui.js"],
+        "css": ["styles.css"]
+      }
     ],
     "permissions": [
-        "activeTab"
-    ]
-}
-
+      "activeTab",
+      "storage",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "host_permissions": ["https://api.openai.com/*"],
+    "content_security_policy": {
+      "script-src": "'self' https://api.openai.com; object-src 'self'"
+    }
+  }
